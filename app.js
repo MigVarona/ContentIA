@@ -24,6 +24,8 @@ app.get('/', (req, res) => {
 });
 
 
+
+
 app.post('/generar', async (req, res) => {
   const prompt = req.body.prompt;
 
