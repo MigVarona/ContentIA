@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Automático de Páginas Web</title>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador Automático de Páginas Web</h1>
+        <form action="/generar" method="post">
+            <div class="form-group">
+                <label for="prompt">Ingrese el tema o descripción para generar el contenido de la página:</label>
+                <textarea id="prompt" name="prompt" rows="4" required></textarea>
+            </div>
+            <button type="submit">Generar Página</button>
+        </form>
+        <% if (resultado) { %>
+            <hr>
+            <h3>Contenido Generado:</h3>
+            <p><%= resultado %></p>
+        <% } %>
+    </div>
+</body>
+</html>
