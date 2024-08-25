@@ -36,7 +36,7 @@ textarea {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    resize: vertical; /* Permite que el usuario redimensione el textarea verticalmente */
+    resize: vertical; 
 }
 
 button {
