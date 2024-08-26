@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Generada Automáticamente</title>
+    <title><%= titulo %></title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Página Generada Automáticamente</h1>
+        <h1><%= titulo %></h1>
         <div class="content">
-            <%= contenido %>
+            <%- contenido %>
         </div>
+
+        <% if (imagenesUrls && imagenesUrls.length > 0) { %>
+            <div class="generated-images">
+                <% imagenesUrls.forEach(function(url) { %>
+                    <div class="generated-image">
+                        <img src="<%= url %>" alt="Imagen Generada">
+                    </div>
+                <% }); %>
+            </div>
+        <% } %>
+
         <a href="/" class="back-link">Generar Otro Contenido</a>
     </div>
 </body>

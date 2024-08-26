@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador Automático de Páginas Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Generador de Contenido</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Generador Automático de Páginas Web</h1>
-        <form action="/generar" method="post">
+        <div class="header">
+            <h1>Generador de Contenido</h1>
+            <p>Genera contenido creativo y relevante en segundos</p>
+        </div>
+
+        <form action="/generar" method="POST" class="form">
             <div class="form-group">
-                <label for="prompt">Ingrese el tema o descripción para generar el contenido de la página:</label>
-                <textarea id="prompt" name="prompt" rows="4" required></textarea>
+                <label for="prompt">Describe tu solicitud:</label>
+                <textarea id="prompt" name="prompt" rows="4" placeholder="Escribe aquí lo que deseas generar..."></textarea>
             </div>
-            <button type="submit">Generar Página</button>
+            <button type="submit" class="btn">Generar Contenido</button>
         </form>
+
         <% if (resultado) { %>
-            <hr>
-            <h3>Contenido Generado:</h3>
-            <p><%= resultado %></p>
+            <div class="resultado">
+                <h2>Resultado Generado</h2>
+                <p><%= resultado %></p>
+            </div>
         <% } %>
     </div>
 </body>
